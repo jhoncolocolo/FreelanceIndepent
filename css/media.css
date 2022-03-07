@@ -1,0 +1,251 @@
+/*SE se va a hacer descktop First es mejor empezar desde el media query mas grande pues normalmente estas son las 4 medidas estandar 1024,768,480,230*/
+@media screen and (max-width: 1023px){/*un laptop empieza en 1024 osea que sabemos que estamos en un desktop y esporque hay pantallas que tienen este tamaño en horizontal y es porwque si volteas tu ipad estaras en 1024 de ancho por lo tanto el primer mediaquery ocurre en 1023*/
+    .portfolio{
+      padding: 0;
+    }
+    .container{
+      padding: 0 1em;
+    }
+
+    .hero{
+      height: 350px;
+    }
+
+    .containerhero{
+      height: 350px;
+    }
+
+    .containerhero h1{
+      font-size: 2em;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+      display: flex;
+      margin: 0 auto;
+      top: 365px;
+    }
+
+    .hero-image{
+      position: absolute;/*con esto la imagen ira detras del texto*/
+      z-index: 1;
+      /*Con las siguientes 4 opciones se logra que el elemnto se extire en todas sus cuatro direcciones*/
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    h1{
+      font-size: 1.5em;
+      z-index: 2;
+    }
+  }
+  
+  @media screen and (max-width: 767px){/*EL ipad tiene 768px pero en esta condición cogera dispositivos mas bajitos del ipad como smarthpohe o dispositivos mas pequeños*/
+    
+    .hero{
+      height: 350px;
+      padding: 0;
+    }
+
+    .containerhero{
+      height: 350px;
+    }
+
+    .containerhero h1{
+      font-size: 1.7em;
+      margin: auto 0;
+      justify-content: center;
+      top: 350px;
+    }
+
+    .event-list-title{
+      margin-left: 0;
+    }
+
+    h2{
+      font-size: 1.2em;
+      margin: .5em 0;
+    }
+
+    .burger-button{
+      display: block;
+    }
+    .header{
+      display: block;/*el menu cae hacia abajo*/
+      height: auto;/*nos servira para resetear valores y de esta manera no se tape los links del menu*/
+    }
+
+    .header ol {
+      display: block; /*si se pone initial lo que le dice es que pondra el valor inicial que tenga el ol*/
+    }
+
+    .header ol li{
+      height: 50px;
+    }
+
+    .header a{
+      justify-content: center;
+      height: 40px;
+      font-size: 2em;
+      text-decoration: underline;
+      margin-bottom: .5em;
+    }
+
+    .header .logo{/*Si se desea centrar una imagen y hay espacio disponible en los horizontes con text-align es sufuciente*/
+      text-align: center;
+    }
+    /*estas opciones de tenerlo en block y en aucnho auto trae mas rendimiento en el navegador y e mejor ancho auto a ancho 100%*/
+    .project {
+      display: block;
+    }
+    .project-details {
+      width: auto;
+      /*font-size: 16px;*/
+    }
+
+    .project-course, .project-date, .project-url{
+      margin: .3em 0;/*los margenes tambien pueden ir en em por lo tanto este margen equivale a como 3 o 4px*/
+    }
+
+    .project-title{
+      font-size: 1.5em;
+      margin-bottom: .3em;
+    }
+    .project-url{
+      font-size: 1em;
+    }
+    .project-course{
+      font-size: .9em;
+    }
+    .project-date{
+      font-size: 1em;
+    }
+    .project-description{
+      font-size: 1em;
+    }
+    .project-imageContainer {
+      width: auto;
+      text-align: center;
+    }
+
+    .event{
+      width: auto;
+      flex-shrink: initial;/*se le resetea el valor para qeu si sea resizable*/
+    }
+    .event img{
+      width: 100%;/*no se le pone auto porque si se pusiera un height se volveria gigante*/
+    }
+
+    .menu{
+      position: fixed;/*deja de heredar el background de us padre*/
+      background-color:rgba(153, 111, 45, .9);/*o se puede poner rgb(3 atributos) o poner rgba(4 atrubutos) y en este caso el "a" de rgba nos dice que hay un 90% de opacidad*/
+      z-index: 3;/*es para que que este abajao del burger-button que tiene 4*/
+      /*con los siguientes 2 atributos hace que el menu quede cogiendo el icono */
+      top:0;
+      left: -100vw;/*con esto ocultamos el menu pues hay que ponerlo en negativo y con vw pues recordemos que si ponemos px se nos muyeve a un ladito mientas que con vw nos oculta del todo a la pantalla, la propiedad de left permite interpolacion dentor de ella misma*/
+      width: 100vw;/*vh view heigth y view width con esto tenemos el 100% del ancho del viewport*/
+      /*height: 100vh;/*con esto tenemos el 100% del alto del viewport*//*centramos los elementos ahí adentro con este atributo y otros dos mas pero lo qu hereda del padre ek nav ol hace que no se cetre en el medio por eso hay o que reinicira el alto en auto osea heigth:auto; esto es si se utiliza el atributo height :100vh;  y se cojen estos otros 3 display: flex;align-items: center;justify-content: center;*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;/*la otra forma es hacerlo sin el height: 100vh y sería poniendole el bottom en 0 y dejando claro esta los tres elemtos que tenemos encima  y se cojen estos otros 3 display: flex;align-items: center;justify-content: center;*/
+      transition: .3s;
+    }
+    .menu.is-active{/*cuando no hay espacio en las 2 clases signifgica que este elemento va a hacer lo que hay aqui abajitop*/
+      left: 0;
+    }
+  }
+  
+  @media screen and (max-width: 480px){
+    .h1 {
+      font-size: 1.5em;
+    }
+
+    .servicioportafolio li {
+      margin-left: 14%;
+      list-style: square;
+    }
+
+    .servicioportafolio{
+      font-size: 0.9em;
+    }
+
+    .project-details {
+      font-size: 14px;
+    }
+
+    .event-detail {
+      /*1em = 16px */
+      margin: -2em .5em .5em .5em;
+      padding: 1em;
+    }
+
+    .contact{
+      height: auto;
+      padding: 1.5em 0;/*hacia arriaba y hacia abajo y cero hacia los constados*/
+      text-align: center;
+      display: block;/*se resetea pues si no se hace el center de arriba en el text align no funcionaria y se resetea con block*/
+    }
+
+    .form-email button{
+      margin: 1em auto;/*esto resetea el boton que esta hacia la derecha lo centra y le deja un margen hacia arriba y hacia abajo*/
+    }
+
+    .form-email h3{
+      margin-top: 0;
+    }
+
+    .footer{
+      display: block;
+      text-align: center;
+      border: 1px solid transparent;
+    }
+
+    .social-link{
+      width: 40px;
+      height: 40px;
+      background-size: 40px;/*Esto correspondra al eje x y al eje y pues backgraund-size es x y aunque esto mismo se le puede dar 100% background-size: 100%;que equivale a lo mismo que decir que background-size: 40px;*/
+    }
+
+    .hero{
+      height: 280px;
+    }
+
+    .containerhero{
+      height: 280px;
+      background-size: contain;
+    }
+
+    .containerhero h1{
+      font-size: 1.2em;
+      top: 300px;
+    }
+  }
+
+  @media screen and (max-width: 320px){
+    .h1 {
+      font-size: 1em;
+      background: rgba(7, 0, 0, 5);/*se le pone un backagraund a la fuente o un color de fondo*/
+    }
+
+    .hero{
+      height: 230px;
+    }
+
+    .containerhero{
+      height: 230px;
+      background-size: contain;
+    }
+
+    .containerhero h1{
+      font-size: 1em;
+      top: 250px;
+    }
+
+    .servicioportafolio{
+      font-size: 0.8em;
+    }
+
+  }

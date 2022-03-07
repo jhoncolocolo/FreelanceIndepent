@@ -1,0 +1,497 @@
+/* reglas
+selectores
+declaraciones
+propiedades
+valores */
+
+
+/* seletor de etiqueta  header - section - article - nav */
+/* header {
+  background: pink;
+  color: red
+} */
+
+/* selector descendente  */
+/* body header div nav ol li a  */
+
+/* selector de clase . */
+
+/* .link */
+
+/* selector de id # */
+/* #portafolio */
+
+
+
+/* gris oscuro = #1d252c */
+/* gris claro = #626262 */
+/* background gris = #1b2127 */
+/* celeste = #026fff */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?gk23a1');/*se esta importando las fuentes*/
+  src:  url('../fonts/icomoon.eot?gk23a1#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?gk23a1') format('truetype'),
+    url('../fonts/icomoon.woff?gk23a1') format('woff'),
+    url('../fonts/icomoon.svg?gk23a1#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+/*Si mi elelmeto tiene e la clase icon-*/
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e991";/*Ca da icono va a agenerar esto en su seudoelelemto*/
+}
+
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+}
+
+h1, 
+h2,
+h3,
+h4,
+h5,
+h6{
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: normal;
+  /* font-style: italic; */
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.5;
+  letter-spacing: -.2px;
+  color: white;
+  margin: 0;
+  /* margin: 100px 150px 70px 30px; */
+  /* text-transform: uppercase; */
+  /* text-decoration: dashed; */
+}
+h1 strong {
+  color: #026fff;
+}
+h2 {
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.hero {
+  height: 350px;
+  background-color: #1b2127;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.containerhero{
+    max-width: 1000px;/*Hay que quitar elementos fijos para que seleccione elementos variables*/
+    /*width: 100%;/*Segun esta linea va a tener el 100% de la pantalla hasta un máximo de 1000px*/
+    flex: 1;/*con esto se obviaria el 100%, pues con esta propiedad le dice que cojha el ancho de todo el elemento*/
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+    background: url('../images/logo_sin_nada.png');
+    background-position-y: top;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-color: #000000;
+
+}
+
+.containerhero h1{
+    position: absolute;
+    margin: 148px 195px;
+}
+
+.hero-image{
+  object-fit: cover;
+}
+
+
+.portfolio {
+  background: #fafafa;
+  padding: 20px;
+  /* background: red; */
+}
+
+.project {
+  /* border-top: 10px solid red;
+  border-right: 10px solid green;
+  border-left: 10px solid orange;
+  border-bottom: 10px solid pink; */
+  /* color: blue; */
+  /* border-top-color: red;
+  border-top-width: 15px;
+  border-top-style: solid; */
+  border: 1px solid gray;
+  border-radius: 10px;
+  /* border-top-left-radius: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  /* margin: 10px; */
+  margin-bottom: 15px;
+  /* margin-right
+  margin-left 
+  margin-top */
+  padding: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.project-course,
+.project-date,
+.project-url {
+  margin: 10px 0;
+}
+.project-description {
+  font-size: 20px;
+}
+.project strong {
+  font-family: 'Fjalla One', sans-serif;
+}
+/* .project-date {
+  margin: 10px 0;
+} */
+
+.project-title {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+.project-details {
+  width: 50%;
+}
+
+.project-imageContainer {
+  width: 50%;
+}
+
+.project-imageContainer img{
+  max-width: 100%;/*le esta diciendo que sea el maximo el 100% de su elemento padre*/
+}
+
+.header {
+  background-color: #1b2127;
+  color: white;
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;/*hace que cuando el menu se vaya haciendo pequeño no se vaya horizonatal sino que se valla adecuando de forma horizontal*/
+}
+
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+figure {
+  margin: 0;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+.menu {
+  height: inherit;
+}
+.header ol {
+  display: flex;
+  height: inherit;
+}
+.header ol li {
+  height: inherit;
+}
+.header a {
+  display: flex;
+  align-items: center;
+  height: inherit;
+  padding: 0 10px;
+}
+
+.flexbox {
+  display: flex;
+  /* flex-wrap: nowrap; */
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid red;
+
+  flex-shrink: 0;
+}
+
+.footer {
+  color: white;
+  background-color: #1b2127;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;/*Nos apila un elemento debajo del otro*/
+}
+
+.footer .container div{
+    margin: 0 auto;
+}
+
+.footer img {
+  vertical-align: middle;
+}
+
+.footer a {
+  color: white;
+}
+
+.event-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ubicacion-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.event-list-title {
+  margin-left: 20px;
+}
+.ubicacion-list-title {
+  margin-left: 20px;
+}
+.event { 
+  margin: 1%;
+  width: 48%;
+  flex-shrink: 0;/*Sirve para que el elemento no haga ningun tipo de rezise y se hereda de los padres que tienen display en flex*/
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4fbff;
+}
+
+.ubicacionmaps { 
+  margin: 1%;
+  width: 100%;
+  flex-shrink: 0;/*Sirve para que el elemento no haga ningun tipo de rezise y se hereda de los padres que tienen display en flex*/
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4fbff;
+}
+
+.event img {
+  width: 100%; 
+  height: 316px;
+  /*object-fit: cover;*/
+}
+
+.portafoliodeservicios{
+  background-color: black;
+  width: 100%;
+  height: 316px;
+  display: flex;
+}
+
+.servicioportafolio{
+  width: 50%;
+  color: white;
+  font-size: 1em;
+}
+
+.servicioportafolio li{
+  margin-left: 10%;
+  list-style: square;
+}
+
+
+.event-detail {
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+.ubicacion-description {
+  text-align: center;
+}
+
+.ubicacion-title{
+  text-align: center;
+}
+.event-description {
+  text-align: left;
+}
+.event-url {
+  color: #056fff;
+  border: 1px solid;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact {
+  background-color: #056fff;
+  color: white;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.social {
+    margin: 0 auto;
+}
+
+.social-link {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.github {
+  background-image: url('../images/github.svg');
+}
+.social-link.facebook {
+  background-image: url('../images/facebook.svg');
+}
+.social-link.whatsapp {
+  background-image: url('../images/w3.png');
+}
+.social-link.instagram {
+  background-image: url('../images/instagram.svg');
+}
+
+
+.form-email input {
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('../images/envelope.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button, submit {
+  display: block;
+  background: transparent;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.form-email h3 { 
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+  /* border: 1px solid red; */
+  max-width: 1000px;/*Hay que quitar elementos fijos para que seleccione elementos variables*/
+  /*width: 100%;/*Segun esta linea va a tener el 100% de la pantalla hasta un máximo de 1000px*/
+  flex: 1;/*con esto se obviaria el 100%, pues con esta propiedad le dice que cojha el ancho de todo el elemento*/
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
+.html-video{
+  width: 100%;
+  height: auto;
+  /*max-width: 100%;*/
+}
+
+.flexible-video{
+  width: 100%
+  height:500px;
+  background: blue;
+  padding-top: 56.25%;/*esto hace que el contenedor se calcule con respecto al ancho */
+  position: relative;/*si no se pone este relative entonces el video se pone la pagina principal*/
+}
+
+.flexible-maps{
+  width: 100%
+  height:500px;
+  background: blue;
+  position: relative;/*si no se pone este relative entonces el video se pone la pagina principal*/
+}
+
+.youtube-video{
+  /*width: 100%;como es conrenido de otra pagina no podemos esperar que nos dimensione de acuerdo al nuestro
+  height: auto;*/
+  
+  position: absolute;/* asi el video se estirara en la pagina */
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*z-index: 3;*/
+}
+
+.burger-button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;/*en este caso equivaldría a 20px por lo que declaramos arriba*/
+  background-color: rgba(240, 215, 125, 1);/*es el color de fonto rgba(rojo,verde, azul, opacidad o tranparecencia)*/
+  display: none;
+  /*para centrar se puede ahcer con los siguientes dos items*/
+  line-height: 40px;/*el alto de l alina es igual al alto dl elemento de este manera centro de manera vertical*/
+  text-align: center;/*para centrar al medio en horizontal como s tecto con textlalign center*/
+  /*o tambien con estos 3 atributos centramos
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+  position: fixed;/*en absolute se queda solamente en la parte superior de la pagina pero si se le pone fixed nos persigue en toda la página*/
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: rgba(2, 2, 3, 1);/*con esta propiedad le cambio el color al icono*/
+  /*font-size: 50px;/*le cambio el tamaño porque es una fuente*/
+}

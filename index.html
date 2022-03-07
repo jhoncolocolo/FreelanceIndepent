@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size:18px;">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <title>AC</title>
+    <link rel="icon" type="image/png" href="images/logo-solo.png" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/media.css"/> <!--  EL atributo media nos dira que vamos a evaluar la condición--> 
+    <meta name="viewport" content="with=device-width,initial-scale=1"> <!--el viewport es el area visible del navegador se manipula el tamño que tendra el dispositivo  va como parmetro el ancho el escalado inicial se le puede poner en 1 que es el 100% hay que ponerlo pues la panatalla se auto escala y pone la letra pequeñ por uno tambien esta el maximo del esacalado with initial-scale maximun-scale por defecto es px no puede ser otro valor por eso el nvaegdor asume que es un px device-width dice al navegador que el viewport es igual al ancho de la pantalla del dispositivo-->
+  </head>
+  <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i><!--La etiqueta i es la que se recomienda para utilizar iconos las fuentes renderizan cada elemento -->
+    <header class="header">
+      <div class="container">
+        <figure class="logo">
+          <img src="images/Logo_Solo.png" height="50" alt="Logo de Alan Colorado"/>
+        </figure>
+        <nav class="menu">
+          <ol>
+            <li>
+              <a class="link" href="#portafolio">Portafolio</a>
+            </li>
+            <li>
+              <a class="link" href="#algunosservicios">Algunos servicios</a>
+            </li>
+            <li>
+              <a class="link" href="#ubicacion">Ubicación</a>                                                                                                                             
+            </li>
+            <li>
+              <a class="link" href="#contacto">Contactarme</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+        <div class="containerhero">
+        <h1>
+          Aires Electricidad Parabrisas Accesorios
+        </h1>
+      </div>
+    </section>
+    <section id="algunosservicios" class="portfolio">
+      <div class="container">
+        <h2>Algunos de mis servicios</h2>
+      <article class="project">
+        <div class="project-details">
+          <h3 class="project-title">Parabrisas</h3>
+          <h6 class="project-course">Instalación</h6>
+          <p class="project-description">Instalación garantizada de Parabrisas, en tiempo óptimo.</p>
+        </div>
+        <figure class="project-imageContainer">
+          <img class="project-image" width="500" src="images/carro1.png" alt="Instalación de Parabrisas">
+        </figure>
+      </article>
+      <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Alarmas</h3>
+            <h6 class="project-course">Instalación</h6>
+            <p class="project-description">Instalación de alarmas.</p>
+          </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/alarma2.png" alt="Instalación de Alarmas">
+          </figure>
+        </article>
+        <article class="project">
+          <div class="project-details">
+            <h3 class="project-title">Aires Acondicionados</h3>
+            <h6 class="project-course">Instalación y reparación</h6>
+            <p class="project-description">Instalación y reparación de Aires acondicionados </p>
+          </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/aires.png" alt="Aires Acondicionados Automotrices">
+          </figure>
+        </article>
+      </div>
+    </section>
+    <section id="eventos" class="event-list">
+      <div class="container">
+        <article id="portafolio" class="event">
+          <figure class="event-imageContainer">
+            <!--<img src="images/Contactos.jpg" width="500" />-->
+            <div class="portafoliodeservicios">
+                  <ul class="servicioportafolio">
+                    <li>Reparación de Aires Acondicionados</li>
+                    <li>Parabrisas</li>
+                    <li>Vidrios para Vehículo, camión y maquinaria pesada</li>
+                    <li>Sonido y Audio Car</li>
+                    <li>Reparación de cremalleras y chapas</li>
+                    <li>Alarmas, bloqueos, vidrios eléctricos y GPS</li>
+                  </ul>
+                  <ul class="servicioportafolio">
+                    <li>Repuestos para su vehículo originales y nacionales</li>
+                    <li>Luces LED</li>
+                    <li>Reparación de Sunroof</li>
+                    <li>Empaquetadura y limpia brisas</li>
+                    <li>Polarizados</li>
+                    <li>Sensores y cámaras de reversa, turbo timer</li>
+                  </ul>
+            </div>
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">PORTAFOLIO DE SERVICIOS</h3>
+            <p class="event-description">PROFESIONAL ESPECIALIZADO MULTIMARCA Y TRABAJO GARANTIZADO.<br/> ESTOY PARA SERVIRLE HAGA SU COTIZACIÓN.
+          </div>
+        </article>
+        <article id="ubicacion" class="event">
+          <figure class="event-imageContainer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d991.5603771687188!2d-75.54119018997613!3d6.231860198396051!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sco!4v1590638056427!5m2!1ses!2sco" width="100%" height="316" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </figure>
+          <div class="event-detail">
+            <h3 class="event-title">SERVICIO A DOMICILIO</h3>
+            <p class="event-description">Buenos Aires Carrera  12 # 45 CC 11 una cuadra arriba de mercados la pastora.<br/> Celular : 3122545152</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="contacto" class="contact">
+      <div class="container">
+        <div class="social">
+          <a href="https://web.facebook.com/alanalejandro.colorado" class="social-link facebook"></a>
+          <a href="https://wa.me/573122545152" class="social-link whatsapp"></a>
+          <a href="https://instagram.com/alanalejandrocolorado" class="social-link instagram"></a>
+          <a href="https://alancolorado.github.io/" class="social-link github"></a>
+        </div>
+      </div>
+    </section>
+     <footer class="footer">
+      <div class="container">
+        <div>
+          <p>Soporte e instalación <img src="images/logo-solo.png" width="50" alt="Alan Colorado"></p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      //console.log(window.matchMedia('screen and (max-width:767px)'));
+      const ipad = window.matchMedia('screen and (max-width:767px)');/*HAce una consulta a los medios y muestra si se cumple la condicion de que son pantallas menores a 767pm, pero solo funciona si recarga el navegador en el tamaño de la pantalla que recargue*/
+      const menu = document.querySelector('.menu');/*bucamos el selector de la clase menu con su contenido*/
+      const burgerButton = document.querySelector('#burger-menu');
+      burgerButton.addEventListener('click',hideShow);/*se emepiece a escuchar y evento de link dendetro de el, tiene dos parametros que es lo que quiere escuchar para este caso un clik y despues el otro parametro es que vamos a hacer con ese click que seria una función*/
+
+      ipad.addListener(validation);/*va a alanzar una funcion que invocara optra funcion dependiendo de cuando se activa la funion que tenemos aca pero funcionara cuando hay aun rezise no se inicializa de una*/
+      
+      function validation(event){/*se manda el evento*/
+        if(event.matches){
+          burgerButton.addEventListener('click',hideShow);
+        }else{/*de la siguiente manera quitamos el addEventListener*/
+          burgerButton.removeEventListener('click',hideShow);
+        }
+        //console.log(event.matches);/*con este console detectamos cuando la pantalla esta mas grande de los 767 o mas pequeña*/
+      }
+      validation(ipad);/*esto hace que cuando inicie en un telefono de una vez se ejecute esto no es necesario en una laptop pero no es igual en telefono por eso se necesita hacer esto en el códigpo*/
+      function hideShow(){
+        if(menu.classList.contains('is-active')){/*si la clase menu contiene la clase is-active ocultalo*/
+          menu.classList.remove('is-active');/* removemos la clase is-active de la clase menu*/
+        }else{  
+          menu.classList.add('is-active');/* y por eso le vamos a alargar una clase que se llamara  isactive*/
+        }
+      }
+      /*Media queries en javascript*/
+    </script>
+  </body>
+</html>
